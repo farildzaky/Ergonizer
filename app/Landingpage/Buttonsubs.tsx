@@ -7,7 +7,7 @@ import Image from "next/image"
 const Buttonsubs = () => {
     const [email, setEmail] = useState("");
 
-    // Fungsi untuk memeriksa format email menggunakan RegExp
+    
     const isValidEmail = (email: string) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
@@ -24,8 +24,8 @@ const Buttonsubs = () => {
         }
 
         console.log("Email terkirim:", email);
-        alert(`Email ${email} berhasil dikirim!`); // Konfirmasi email berhasil dikirim
-        setEmail(""); // Mengosongkan input setelah pengiriman
+        alert(`Email ${email} berhasil dikirim!`); 
+        setEmail(""); 
     };
 
     return (

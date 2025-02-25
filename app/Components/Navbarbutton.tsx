@@ -13,7 +13,7 @@ const Navbarbutton = () => {
   return (
     <Button
       text="Masuk"
-      onClick={handleClick} // Fix penulisan onClick
+      onClick={handleClick} 
       className="bg-black text-white px-[24px]"
     />
   );

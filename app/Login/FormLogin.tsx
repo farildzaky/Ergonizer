@@ -1,21 +1,21 @@
-"use client"; // Jika Anda menggunakan Next.js 13+ dengan app router (opsional)
+"use client"; 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import hero from "../Assets/hero.svg";
 import Logo from "../Assets/logo.svg";
 import google from "../Assets/google.svg";
 import apple from "../Assets/apple.svg";
-import hide from "../Assets/hide.svg"; // Ikon mata tertutup
-import show from "../Assets/show.svg"; // Ikon mata terbuka
+import hide from "../Assets/hide.svg";
+import show from "../Assets/show.svg";
 import Link from "next/link";
 
 const Login = () => {
-  // State untuk toggle password
+ 
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
-  // State untuk ingat akun
+ 
   const [rememberMe, setRememberMe] = useState<boolean>(false);
 
-  // Ambil status rememberMe dari localStorage saat component di-mount
+ 
   useEffect(() => {
     const storedRememberMe = localStorage.getItem("rememberMe");
     if (storedRememberMe) {
@@ -28,7 +28,7 @@ const Login = () => {
     setIsPasswordVisible((prev) => !prev);
   };
 
-  // Fungsi untuk handle perubahan checkbox "ingat akun"
+  
   const handleRememberMeChange = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -39,7 +39,7 @@ const Login = () => {
 
   return (
     <div className="flex w-full justify-between">
-      {/* Bagian kiri */}
+      
       <div
         id="sisi_kiri"
         className="w-full max-w-[497px] mx-auto my-auto flex-col gap-[40px] flex"
@@ -98,7 +98,7 @@ const Login = () => {
             />
           </div>
 
-          {/* Input Password */}
+          
           <div className="flex flex-col gap-[16px]">
             <div className="flex flex-col gap-[8px]">
               <div className="flex flex-row justify-between items-center">
@@ -113,10 +113,10 @@ const Login = () => {
                 </p>
               </div>
 
-              {/* Wrapper input password + ikon */}
+             
               <div className="relative w-full max-w-[497px]">
                 <input
-                  type={isPasswordVisible ? "text" : "password"} // Pakai state untuk toggle
+                  type={isPasswordVisible ? "text" : "password"} 
                   placeholder="Masukkan Password"
                   className="w-full border-2 rounded-[8px] px-[16px] py-[12px] pr-[40px]"
                 />
@@ -141,7 +141,7 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Tombol Masuk & Link Daftar */}
+        
         <div className="flex flex-col gap-[32px]">
           <Link href={"/Dashboard"}>
             <button className="flex justify-center bg-[#121926] w-full py-[16px] px-[24px] text-white rounded-[8px]">
@@ -155,7 +155,7 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Sisi kanan: Hero Image */}
+      
       <div
         id="sisi_kanan"
         className="hidden xl:flex items-center justify-center"

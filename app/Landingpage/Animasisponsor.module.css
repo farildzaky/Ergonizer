@@ -7,7 +7,7 @@
   .slider {
     display: flex;
     gap: 1.5rem;
-    /* (310px * 7) + (24 * 6) */
+   
     width: 2314px;
   }
   
